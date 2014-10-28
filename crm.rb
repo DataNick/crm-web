@@ -1,3 +1,5 @@
+
+require_relative 'rolodex'
 require_relative 'contact'
 require 'sinatra'
 
