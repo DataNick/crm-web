@@ -1,3 +1,4 @@
+require '/.contacts'
 require 'sinatra'
 
 get '/' do
