@@ -1,12 +1,14 @@
 		.highlighted {
-			font-color: yellow;
+			color: blue;
 		}
 
 		.downlighted {
-			font-color: orange;
+			color: magenta;
 		}
 		
-
+		.mainlight {
+			color: purple;
+		}
 
 		nav {
 			color: red;
