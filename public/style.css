@@ -10,13 +10,34 @@
 			color: purple;
 		}
 
-		nav {
+		p {
+			background-color: tomato;
+			margin: 10px 20px 30px 50px;
+			display: inline-block;
+		}
+		.list {
 			color: red;
+		}
+		
+		.point {
 			color: orange;
 		}
 
-		p {
-			background-color: tomato;
+		.top_line {
+			background-color: yellow;
+			padding:50px;
+			display: inline-block;
 		}
 
+	.container {
+		border: 25px solid blue;
+		display: inline-block;
+		background-color: red;
+		padding: 20px 20px;
+		border-width: 50px;
+	}
+
+	.container a {
+		color: orange;
+	}
 

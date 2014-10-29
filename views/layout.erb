@@ -8,14 +8,14 @@
 <body>
 
 	<header>
-		<h2>Everything you need to know about HTML &amp; CSS</h2>
+
+		<h2 class="top_line">Bitmaker Labs CRM Assignment for October Cohort</h2>
 	</header>
 
 		<h1>Welcome to <%= $crm_app_name %></h1>
 
-				<%= yield %> 
 				
-
+		<div class="container">
 		<nav>
 		<ul>
 		<li><a href="/contacts">View all contacts</a></li>
@@ -23,6 +23,8 @@
 		<li><a href="/">Home</a></li>
 		</ul>
 		</nav>
+		</div>
+				<%= yield %> 
 
 	<footer>
 			Bitmaker Labs 2014
