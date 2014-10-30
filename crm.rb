@@ -6,7 +6,7 @@ require_relative 'contact'
 $crm_app_name = "Bitmaker Customer Service"
 $rolodex = Rolodex.new
 # without this, ruby will call uninitialized class variable 
-$rolodex.add_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
+
 
 
 get '/' do
@@ -68,13 +68,13 @@ put "/contacts/:id" do
     raise Sinatra::NotFound
   end
 
-  delete "/contacts/:id" do
+ delete "/contacts/:id" do
   	@contact = $rolodex.find(params[:id].to_i)
-  	if @contact
+  if @contact
   		$rolodex.remove_contact(@contact)
   		redirect to ("/contacts")
-  	else
-  		raise Sinatra::NotFound
+  else
+  	raise Sinatra::NotFound
   	end
   end
 
