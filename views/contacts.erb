@@ -1,9 +1,17 @@
-<h3 class="downlighted">ALL CONTACTS</h3>
-<p>
-This should look be on a tomato background
-</p>
+<html>
+<head>
+<title>Contact Page</title>
+</head>
+<body>
+<h3>ALL CONTACTS</h3>
+
 <ul>
 <% $rolodex.contacts.each do |contact| %>
-<li><%= contact.first_name %> <%= contact.last_name %> <%=contact.email %></li>
+<li>First Name: <%= contact.first_name %></li> 
+<li>Last Name: <%= contact.last_name %></li>
+<li>Email: <%=contact.email %></li>
 <% end %>
 </ul>
+
+</body>
+</html>

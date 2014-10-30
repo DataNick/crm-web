@@ -3,7 +3,7 @@ require_relative 'rolodex'
 require_relative 'contact'
 require 'sinatra'
 
-$crm_app_name = "Nick's CRM"
+$crm_app_name = "Bitmaker Customer Service"
 $rolodex = Rolodex.new
 get '/' do
 	

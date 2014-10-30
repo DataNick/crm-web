@@ -8,26 +8,25 @@
 <body>
 
 	<header>
-
-		<h2 class="top_line">Bitmaker Labs CRM Assignment for October Cohort</h2>
+		<h2 id="Header">Bitmaker Labs Customer Relationship Management</h2>
 	</header>
 
-		<h1>Welcome to <%= $crm_app_name %></h1>
-
-				
-		<div class="container">
-		<nav>
-		<ul>
-		<li><a href="/contacts">View all contacts</a></li>
-		<li><a href="/contacts/new">add contact</a></li>
-		<li><a href="/">Home</a></li>
-		</ul>
-		</nav>
-		</div>
+		<h1 id="greeting">Welcome to <%= $crm_app_name %>!</h1>
+		<div class="yield">
 				<%= yield %> 
+		</div>
+		<div class="font">
+				<nav>
+				<ul id="navigation">
+					</li><li><a href="/">Home</a></li>
+					<li><a href="/contacts">View all contacts</a></li><li>
+					<a href="/contacts/new">Add contact</a>
+				</ul>
+				</nav>
+		</div>
 
 	<footer>
-			Bitmaker Labs 2014
+			&copy Bitmaker Labs 2014
 	</footer>
 </body>
 </html>

@@ -17,4 +17,9 @@ class Rolodex
 		@contacts.delete_if{|contact| contact.id == id_delete}
 	end
 
+	def find(contact_id)
+		@contacts.each {|contact| contact.id == contact_id}
+		
+	end
+
 end
