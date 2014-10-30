@@ -34,20 +34,20 @@ post '/contacts' do
 end
 
 get '/contacts/1000' do
-  	@contacts = $rolodex.find(1000)
+  	@contact = $rolodex.find(1000)
   	erb :show_contact
 end
 
 get "/contacts/:id" do
-  	if @contact = $rolodex.find(params[:id].to_i)
-  	erb :show_contact
-  	  else
-    raise Sinatra::NotFound
-end
+	if @contact = $rolodex.find(params[:id].to_i)
+  		erb :show_contact
+  	else
+    	raise Sinatra::NotFound
+	end
 end
 
 get "/contacts/:id/edit" do
-  @contact = @@rolodex.find(params[:id].to_i)
+  @contact = $rolodex.find(params[:id].to_i)
   if @contact
     erb :edit_contact
   else
@@ -56,7 +56,7 @@ get "/contacts/:id/edit" do
 end
 
 put "/contacts/:id" do
-  @contact = @@rolodex.find(params[:id].to_i)
+  @contact = $rolodex.find(params[:id].to_i)
   if @contact
     @contact.first_name = params[:first_name]
     @contact.last_name = params[:last_name]
@@ -67,6 +67,17 @@ put "/contacts/:id" do
   else
     raise Sinatra::NotFound
   end
+
+  delete "/contacts/:id" do
+  	@contact = $rolodex.find(params[:id].to_i)
+  	if @contact
+  		$rolodex.remove_contact(@contact)
+  		redirect to ("/contacts")
+  	else
+  		raise Sinatra::NotFound
+  	end
+  end
+
 end
 
 
