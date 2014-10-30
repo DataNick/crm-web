@@ -1,11 +1,12 @@
-
+require 'sinatra'
+require "sinatra/reloader" if development?
 require_relative 'rolodex'
 require_relative 'contact'
-require 'sinatra'
 
 $crm_app_name = "Bitmaker Customer Service"
 $rolodex = Rolodex.new
-@@rolodex.add_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
+# without this, ruby will call uninitialized class variable 
+$rolodex.add_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
 
 
 get '/' do
@@ -31,3 +32,10 @@ post '/contacts' do
 	$rolodex.add_contact(new_contact)
 	redirect to('/contacts')
 end
+
+get '/contacts/1000' do
+  	@contacts = $rolodex.find(1000)
+  	erb :show_contact
+end
+
+
