@@ -38,4 +38,15 @@ get '/contacts/1000' do
   	erb :show_contact
 end
 
+get "/contacts/:id" do
+  	if @contact = $rolodex.find(params[:id].to_i)
+  	erb :show_contact
+  	  else
+    raise Sinatra::NotFound
+end
+end
+
+
+
+
 
