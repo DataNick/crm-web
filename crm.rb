@@ -1,11 +1,11 @@
+require_relative 'rolodex'
+
 require 'sinatra'
 require 'data_mapper'
 
 DataMapper.setup(:default, "sqlite3:database.sqlite3")
 
-require "sinatra/reloader" if development?
-require_relative 'rolodex'
-
+# require "sinatra/reloader" if development?
 
 $crm_app_name = "Bitmaker Customer Service"
 $rolodex = Rolodex.new
@@ -19,7 +19,7 @@ class Contact
     property :last_name, String
     property :email, String
     property :note, String
-  end
+end
 
 DataMapper.finalize
 DataMapper.auto_upgrade!
@@ -30,8 +30,8 @@ DataMapper.auto_upgrade!
   #   @last_name = last_name
   #   @email = email
   #   @note = note    
-  # end
-end
+#end
+
 
 get '/' do
 	
