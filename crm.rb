@@ -65,10 +65,10 @@ end
 # 	redirect to('/contacts')
 # end
 
-get '/contacts/1000' do
-  	@contact = $rolodex.find(1000)
-  	erb :show_contact
-end
+# get '/contacts/1000' do
+#     @contact = Contact.get(params[:id].to_i)
+#   	erb :show_contact
+# end
 
 get "/contacts/:id" do
     @contact = Contact.get(params[:id].to_i)
