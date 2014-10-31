@@ -5,13 +5,33 @@ DataMapper.setup(:default, "sqlite3:database.sqlite3")
 
 require "sinatra/reloader" if development?
 require_relative 'rolodex'
-require_relative 'contact'
+
 
 $crm_app_name = "Bitmaker Customer Service"
 $rolodex = Rolodex.new
 # without this, ruby will call uninitialized class variable 
 
+class Contact
+  include DataMapper::Resource
 
+    property :id, Serial
+    property :first_name, String
+    property :last_name, String
+    property :email, String
+    property :note, String
+  end
+
+DataMapper.finalize
+DataMapper.auto_upgrade!
+
+  # attr_accessor :id, :first_name, :last_name, :email, :note
+  # def initialize(first_name, last_name, email, note)
+  #   @first_name = first_name
+  #   @last_name = last_name
+  #   @email = email
+  #   @note = note    
+  # end
+end
 
 get '/' do
 	
