@@ -7,25 +7,31 @@
 </head>
 <body>
 
-	<header>
-		<h2 id="Header">Bitmaker Labs Customer Relationship Management</h2>
-	</header>
+<header>
+</div>
 
-		<h1 id="greeting">Welcome to <%= $crm_app_name %>!</h1>
-		<div class="yield">
+	<h2 id="Header">Bitmaker Labs Customer Relationship Management</h2>
+	
+</header>
+
+	<h1 id="greeting">Welcome to <%= $crm_app_name %>!</h1>
+	<div class="yield">
 				<%= yield %> 
-		</div>
-		<div class="font">
-				<nav>
-				<ul id="navigation">
-					<li><a href="/">Home</a></li>
-					<li><a href="/contacts">View all contacts</a></li>
-					<li><a href="/contacts/new">Add contact</a></li>
-					<li><a href="/contacts/1000">Show contact 1000</a></li>
 
-				</ul>
-				</nav>
-		</div>
+	<div class="font">
+		<nav>
+			<ul id="navigation">
+				<li><a href="/">Home</a></li>
+				<li><a href="/contacts">View all contacts</a></li>
+				<li><a href="/contacts/new">Add contact</a></li>
+				<li><a href="/contacts/1000">Show contact 1000</a></li>
+
+			</ul>
+		</nav>
+	</div>
+ 	<button class="btn btn-primary">
+    	<a href= "/contacts/new">Contacts</a>
+  	</button>
 
 	<footer>
 			&copy Bitmaker Labs 2014

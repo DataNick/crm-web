@@ -16,10 +16,9 @@ h2 {
 #Header {
 	padding:25px;
 	font-size: 32px;
-	font-family:Tahoma;
-	color:#808080;
-	border: 10px dotted #600000;
-	display: inline-block;
+	font-family: sans-serif;
+	color:#600000;
+	background-color: coral;
 }
 
 
@@ -67,6 +66,18 @@ a:hover{
 	margin-bottom: 50px;
 	font-family:Georgia;
 	display: inline-block;
+}
+
+.btn {
+	border: 5px;
+	background-color: maroon;
+	color: green;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-family: Helvetica;
+	padding: 10px;
+	border-radius: 100px;
+
 }
 
 p {
